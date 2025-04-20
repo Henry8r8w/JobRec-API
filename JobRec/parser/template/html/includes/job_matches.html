@@ -1,0 +1,31 @@
+<div class="col-md-6 mb-4">
+    <div class="card">
+      <div class="card-header bg-info text-white">
+        <h4>Job Matches</h4>
+      </div>
+      <div class="card-body" id="jobMatchesList">
+        {% if matches %}
+          {% for job in matches %}
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="{{ job.apply_link }}" target="_blank">{{ job.title }}</a>
+                </h5>
+                <p class="card-text">{{ job.description }}</p>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar"
+                       style="width: {{ job.match_score }}%"
+                       aria-valuenow="{{ job.match_score }}" aria-valuemin="0" aria-valuemax="100">
+                    {{ job.match_score }}%
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        {% else %}
+          <p>No job matches found.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  

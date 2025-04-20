@@ -1,0 +1,96 @@
+/* Dashboard specific styling */
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    border-radius: 8px 8px 0 0;
+    font-weight: bold;
+}
+
+.progress {
+    height: 25px;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    font-weight: bold;
+}
+
+#skillsList .list-group-item {
+    transition: background-color 0.3s;
+}
+
+#skillsList .list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+#jobMatchesList .card {
+    transition: transform 0.2s;
+}
+
+#jobMatchesList .card:hover {
+    transform: translateY(-3px);
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    margin: 20px 0;
+}
+
+/* Match percentage color coding */
+.progress-bar[aria-valuenow="100"],
+.progress-bar[aria-valuenow="99"],
+.progress-bar[aria-valuenow="98"],
+.progress-bar[aria-valuenow="97"],
+.progress-bar[aria-valuenow="96"],
+.progress-bar[aria-valuenow="95"],
+.progress-bar[aria-valuenow="94"],
+.progress-bar[aria-valuenow="93"],
+.progress-bar[aria-valuenow="92"],
+.progress-bar[aria-valuenow="91"],
+.progress-bar[aria-valuenow="90"] {
+    background-color: #28a745; /* Green for high matches */
+}
+
+.progress-bar[aria-valuenow="89"],
+.progress-bar[aria-valuenow="88"],
+.progress-bar[aria-valuenow="87"],
+.progress-bar[aria-valuenow="86"],
+.progress-bar[aria-valuenow="85"],
+.progress-bar[aria-valuenow="84"],
+.progress-bar[aria-valuenow="83"],
+.progress-bar[aria-valuenow="82"],
+.progress-bar[aria-valuenow="81"],
+.progress-bar[aria-valuenow="80"],
+.progress-bar[aria-valuenow="79"],
+.progress-bar[aria-valuenow="78"],
+.progress-bar[aria-valuenow="77"],
+.progress-bar[aria-valuenow="76"],
+.progress-bar[aria-valuenow="75"] {
+    background-color: #17a2b8; /* Blue for medium-high matches */
+}
+
+.progress-bar[aria-valuenow="74"],
+.progress-bar[aria-valuenow="73"],
+.progress-bar[aria-valuenow="72"],
+.progress-bar[aria-valuenow="71"],
+.progress-bar[aria-valuenow="70"],
+.progress-bar[aria-valuenow="69"],
+.progress-bar[aria-valuenow="68"],
+.progress-bar[aria-valuenow="67"],
+.progress-bar[aria-valuenow="66"],
+.progress-bar[aria-valuenow="65"],
+.progress-bar[aria-valuenow="64"],
+.progress-bar[aria-valuenow="63"],
+.progress-bar[aria-valuenow="62"],
+.progress-bar[aria-valuenow="61"],
+.progress-bar[aria-valuenow="60"] {
+    background-color: #ffc107; /* Yellow for medium matches */
+}
+
+/* For lower matches, default Bootstrap progress-bar color (blue) applies */

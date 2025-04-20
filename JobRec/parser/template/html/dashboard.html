@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% include "includes/upload_form.html" %}
+
+
+{% load static %}
+{% block title %}Resume Analysis Dashboard{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'parser/css/dashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 mb-4">
+            <h1 class="text-center">Resume Analysis Dashboard</h1>
+        </div>
+    </div>
+
+    <!-- Resume Upload Form -->
+    {% include "includes/upload_form.html" %}
+
+    <!-- Results Section (hidden initially) -->
+    {% if analysis or matches %}
+    <div id="resultsSection" class="row">
+    {% else %}
+    <div id="resultsSection" class="row d-none">
+    {% endif %}
+        <!-- Resume Analysis Section -->
+        {% include "includes/analysis_section.html" %}
+
+        <!-- Job Matches Section -->
+        {% include "includes/job_matches.html" %}
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'parser/js/resume_upload.js' %}"></script>
+<script src="{% static 'parser/js/resume_analysis.js' %}"></script>
+<script src="{% static 'parser/js/job_matches.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,7 @@
+beautifulsoup4==4.13.4
+Django==5.1.7
+djangorestframework==3.14.0
+Faker==37.1.0
+openai==0.27.8
+PyPDF2==3.0.1
+Requests==2.32.3
